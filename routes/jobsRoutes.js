@@ -82,6 +82,8 @@ const router = express.Router();
  *         application/json:
  *           schema:
  *             $ref: '#/components/schemas/Job'
+ *      security:
+ *       - bearerAuth: []
  *     responses:
  *       201:
  *         description: The created job posting.
