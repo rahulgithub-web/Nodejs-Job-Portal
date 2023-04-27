@@ -101,6 +101,14 @@ router.post('/register', limiter, registerController);
  *        application/json:
  *          schema:
  *            $ref: '#/components/schemas/User'
+ * components:
+ * securitySchemes:
+ *   bearerAuth:           
+ *     type: http
+ *     scheme: bearer
+ *     bearerFormat: JWT    
+ * security:
+ *  - bearerAuth: [] 
  *    responses:
  *      200:
  *        description: login successfull
